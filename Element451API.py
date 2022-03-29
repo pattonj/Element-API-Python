@@ -235,19 +235,18 @@ if __name__ == "__main__":
     my_api = os.getenv("my_api")
     my_feature = os.getenv("my_feature")
     my_segment = os.getenv("my_segment")
-    my_template = os.getenv("my_template_guid")
 
     """Testing Export"""
-    # my_template={ "columns":
-    #           [ { "field": "Email", "mode": "slug", "slug": "user-email-address" },
-    #           { "field": "First Name", "mode": "slug", "slug": "user-first-name" },
-    #            { "field": "Last Name", "mode": "slug", "slug": "user-last-name" }]#,
-    #            #{ "field": "Note Type", "mode": "slug", "slug": "user-notes-note-type"} ]
-    #            }
+    # my_template = os.getenv("my_template_guid")
+    # # my_template={ "columns":
+    # #         [ { "field": "Email", "mode": "slug", "slug": "user-email-address" },
+    # #         { "field": "First Name", "mode": "slug", "slug": "user-first-name" },
+    # #          { "field": "Last Name", "mode": "slug", "slug": "user-last-name" }]#,
+    # #          #{ "field": "Note Type", "mode": "slug", "slug": "user-notes-note-type"} ]
+    # #          }
     # column_key = "slug"
-    # To use the unwind feature, uncomment the Note Type field in the template and the two fields below.
-    # unwind = {"root" : "user-notes-root"}
-
+    # # To use the unwind feature, uncomment the Note Type field in the template and the two fields below.
+    # # unwind = {"root" : "user-notes-root"}
     # print(api_data_request(my_client, my_api, my_feature, my_segment, my_template))
 
     """Testing search"""
