@@ -269,9 +269,25 @@ if __name__ == "__main__":
         )
     )
 
-    """Search Example"""
+    """Search Example 1"""
     my_segment = os.getenv("my_segment")  # "client.segments.4291"
     project = ["first_name"]
+    print(api_user_search(my_client, my_api, my_feature, my_segment, project))
+
+    """Search Example 2"""
+    my_segment = {
+        "segment": {
+            "users": {
+                "filters": {
+                    "type": "filter",
+                    "target": "<mapping:user-email-address>",
+                    "operator": "$match",
+                    "value": "/element451/i",
+                }
+            }
+        }
+    }
+    project = ["_id"]
     print(api_user_search(my_client, my_api, my_feature, my_segment, project))
 
     """Import Example 1"""
