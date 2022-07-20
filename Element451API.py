@@ -58,10 +58,10 @@ def api_user_search(
             if results_data != "":
                 for x in results_data["data"]:
                     all_user_payload_results["data"].append(x)
-            all_user_payload_results["meta"]["filtered_total"] = (
-                all_user_payload_results["meta"]["filtered_total"]
-                + all_user_payload_results["meta"]["filtered_total"]
-            )
+                all_user_payload_results["meta"]["filtered_total"] = (
+                    results_data["meta"]["filtered_total"]
+                    + all_user_payload_results["meta"]["filtered_total"]
+                )
 
             run = False
 
